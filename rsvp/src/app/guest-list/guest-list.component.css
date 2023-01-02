@@ -1,0 +1,26 @@
+div{
+  padding: 5px
+}
+
+#guestCount{
+  margin-top: 30px;
+}
+
+#guests {
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+#guests tr:nth-child(even){background-color: #eef1ff;}
+
+#guests tr:hover {background-color: white;}
+
+#guests th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(114, 146, 250);
+  color: white;
+}

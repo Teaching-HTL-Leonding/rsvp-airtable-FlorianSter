@@ -1,0 +1,44 @@
+<h2>Registrieren</h2>
+
+<form>
+  <div>
+    <label>
+      Name:
+      <input type="text" name="name" [(ngModel)]="this.currentItem.guestName">
+    </label>
+  </div>
+
+  <div>
+    <label>
+      An Party Teilnehmen:
+      <input type="checkbox" name="attend" [(ngModel)]="this.currentItem.attend">
+    </label>
+  </div>
+
+  <span [hidden]="!this.currentItem.attend">
+    <div >
+      <label>
+        <p>Anmerkung:</p>
+        <textarea name="remark" cols="30" rows="5" [(ngModel)]="this.currentItem.remark"></textarea>
+      </label>
+    </div>
+
+    <div>
+      <label>
+        Zusätzlicher Gast:
+        <input type="checkbox" name="additional guest" [(ngModel)]="this.currentItem.additionalGuest">
+      </label>
+    </div>
+
+    <div>
+      <label>
+        Name des zusätzlichen Gasts:
+        <input type="text" name="additionalName" id=""  [disabled]="!this.currentItem.additionalGuest" [(ngModel)]="this.currentItem.nameAddtionalGuest">
+      </label>
+    </div>
+</span>
+  <div>
+    <button (click)="add()"  [disabled]="this.currentItem.guestName === ''">Registrieren</button>
+  </div>
+</form>
+

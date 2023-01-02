@@ -1,0 +1,28 @@
+
+<table id="guests">
+  <tbody>
+    <th>Name</th>
+    <th>Nimmt Teil</th>
+    <th>Anmerkung:</th>
+    <th>Zusätzlicher Gast</th>
+    <th>Name des zusätzlichen Gasts</th>
+    <tr *ngFor="let a of this.getList()">
+      <td>{{a.fields.guestName}}</td>
+      <td>{{a.fields.attend}}</td>
+      <td>{{a.fields.remark}}</td>
+      <td>{{a.fields.additionalGuest}}</td>
+      <td>{{a.fields.nameAddtionalGuest}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<label >
+  Gäste die Teilnehmen:
+  <input type="text" id="guestCount"  [value]="numOfGuests()">
+</label>
+
+
+
+
+
+
